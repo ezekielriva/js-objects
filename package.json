@@ -4,7 +4,7 @@
   "description": "New way on OOP in Javascript.",
   "main": "Heritage.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
