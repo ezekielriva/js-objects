@@ -1,0 +1,31 @@
+{
+  "name": "js-objects",
+  "version": "0.0.0",
+  "description": "New way on OOP in Javascript.",
+  "main": "Heritage.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezekielriva/js-objects.git"
+  },
+  "keywords": [
+    "mocha",
+    "javascript",
+    "js",
+    "oop",
+    "object",
+    "paradigm",
+    "teaching"
+  ],
+  "author": "Ezekiel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezekielriva/js-objects/issues"
+  },
+  "homepage": "https://github.com/ezekielriva/js-objects",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
