@@ -4,7 +4,7 @@
   "description": "New way on OOP in Javascript.",
   "main": "Heritage.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha -r ./node_modules/jscoverage/bin/jscoverage --covout=html test/"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/ezekielriva/js-objects",
   "devDependencies": {
+    "expect.js": "^0.3.1",
+    "jscoverage": "^0.5.9",
     "mocha": "^2.0.1"
   }
 }

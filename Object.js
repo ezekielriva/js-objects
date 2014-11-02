@@ -9,11 +9,11 @@ var Person = (function () {
   }
 
   function dieAlert () {
-    alert(this.dieMessage + '. At age: ' + this.getAge());
+    console.info(this.dieMessage + '. At age: ' + this.getAge());
   }
 
   function aliveAlert () {
-    alert(this.aliveMessage + '. At age: ' + this.getAge());
+    console.info(this.aliveMessage + '. At age: ' + this.getAge());
   }
 
   function Person (name, age) {
@@ -33,9 +33,13 @@ var Person = (function () {
     this.aliveMessage = 'You are alive!';
 
     this.isDied = function () {
-      var are = ( AGE_LIMIT <= _age )? dieAlert : aliveAlert;
-      log();
-      return are.call(this);
+      if ( AGE_LIMIT <= _age ) {
+        dieAlert.call(this);
+        return true;
+      } else {
+        aliveAlert.call(this);
+        return false;
+      }
     }
 
     this.birthday = function () {
@@ -52,7 +56,9 @@ var Person = (function () {
   Person.prototype.dieMessage   = "You are died!";
 
   Person.prototype.makeHappy = function() {
-    alert("I'm happy :) !");
+    var HAPPY_MESSAGE = "I'm happy :) !";
+    console.log(HAPPY_MESSAGE);
+    return HAPPY_MESSAGE;
   }
 
   Person.staticVariable = 'some value';
@@ -63,3 +69,5 @@ var Person = (function () {
 
   return Person;
 })();
+
+module.exports = Person;
